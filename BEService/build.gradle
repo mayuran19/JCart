@@ -1,0 +1,14 @@
+apply plugin: 'war'
+
+repositories {
+	
+}
+
+dependencies {
+	compile project(':core')
+	compile group: 'org.springframework.batch', name: 'spring-batch-core', version: '3.0.7.RELEASE'
+}
+
+war {
+    baseName = "JCartService"
+}
