@@ -31,6 +31,6 @@ public class WebBEAppInitializer implements WebApplicationInitializer {
         servicesContext.register(WebBEServletConfig.class);
         ServletRegistration.Dynamic servicesDispatchServlet = servletContext.addServlet("webbe", new DispatcherServlet(servicesContext));
         servicesDispatchServlet.setLoadOnStartup(1);
-        servicesDispatchServlet.addMapping("/*");
+        servicesDispatchServlet.addMapping("/");
     }
 }

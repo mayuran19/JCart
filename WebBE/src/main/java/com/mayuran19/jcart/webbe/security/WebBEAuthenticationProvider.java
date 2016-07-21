@@ -3,6 +3,7 @@ package com.mayuran19.jcart.webbe.security;
 import com.mayuran19.jcart.core.model.db.User;
 import com.mayuran19.jcart.core.service.UserService;
 import com.mayuran19.jcart.webbe.model.db.WebBEUser;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Component("webBEAuthenticationProvider")
 public class WebBEAuthenticationProvider implements AuthenticationProvider {
+    @Autowired
     private UserService userService;
 
     @Override
